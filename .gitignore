@@ -1,0 +1,31 @@
+*.py[cod]
+*$py.class
+*.so
+.python-version
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+ENV/
+env/
+*.env*
+
+
+
+# .pdm.toml
+# __pypackages__/
+
+
+
+*.db
+*.sqlite3
+*.sqlite3-journal
