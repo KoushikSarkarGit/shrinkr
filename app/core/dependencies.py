@@ -12,5 +12,5 @@ def get_settings() -> Settings:
 
 async def get_db() -> AsyncGenerator[AsyncSession, None]:
     # async with ensures the session is closed when its context exits, including when an exception occurs.
-    async with AsyncSessionLocal as session:
+    async with AsyncSessionLocal() as session:
         yield session
