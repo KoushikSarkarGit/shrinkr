@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     environment: str = "development"
     description: str = "Production-oriented URL Shortener and Analytics API"
     debug: bool = True
+    database_url: str
 
     model_config = SettingsConfigDict(
         env_file=".env",
