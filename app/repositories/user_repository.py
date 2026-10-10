@@ -13,7 +13,7 @@ class UserRepository:
     # One match	        Returns User	        Returns User
     # Multiple matches	Returns first result	Raises MultipleResultsFound
 
-    async def get_by_email(self, email: str) -> str:
+    async def get_by_email(self, email: str) -> User:
         statement = select(User).where(User.email == email)
         result = await self.session.execute(statement)
         return result.scalar_one_or_none()

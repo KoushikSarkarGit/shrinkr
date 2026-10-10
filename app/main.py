@@ -4,9 +4,8 @@ from fastapi import Depends, FastAPI
 from starlette.middleware.base import BaseHTTPMiddleware
 
 from app.core.config import Settings, settings
-from app.core.dependencies import get_link_service, get_settings
+from app.core.dependencies import get_settings
 from app.middleware.request_context import request_context_middleware
-# from app.services.link_service import LinkService
 
 
 @asynccontextmanager
