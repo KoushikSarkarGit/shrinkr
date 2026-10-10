@@ -1,4 +1,4 @@
-import uuid
+import uuid  # noqa: N999
 from datetime import datetime
 
 from sqlalchemy import DateTime, ForeignKey, String, Text, func
@@ -6,6 +6,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.types import Uuid
 
 from app.infrastructure.database.database import Base
+
 # from app.models import User
 
 
@@ -49,6 +50,6 @@ class Link(Base):
         nullable=True,
     )
 
-    user: Mapped["User"] = relationship(  # noqa: F821
+    user: Mapped["User"] = relationship(  # noqa: F821 # type: ignore
         back_populates="links",
     )
