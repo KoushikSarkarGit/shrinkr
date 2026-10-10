@@ -36,12 +36,3 @@ async def get_health(
     app_settings: Settings = Depends(get_settings),
 ):
     return {"status": "Ok", "environment": app_settings.environment}
-
-
-# @app.get("/testls")
-# async def test_link_service(
-#     service: LinkService = Depends(get_link_service),
-# ):
-#     return {
-#         "message": "LinkService dependency resolved successfully",
-#     }
