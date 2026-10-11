@@ -6,6 +6,8 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from app.core.config import Settings, settings
 from app.core.dependencies import get_settings
 from app.middleware.request_context import request_context_middleware
+from app.api.register_exception_handlers import register_exception_handlers
+from app.api.router import api_router
 
 
 @asynccontextmanager
@@ -24,11 +26,14 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-
 app.add_middleware(
     BaseHTTPMiddleware,
     dispatch=request_context_middleware,
 )
+
+app.include_router(api_router)
+
+register_exception_handlers(app)
 
 
 @app.get("/healthz")
