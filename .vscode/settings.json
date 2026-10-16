@@ -1,4 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "charliermarsh.ruff"
+  "editor.defaultFormatter": "charliermarsh.ruff",
+  "ruff.lineLength": 90,
+  "python.terminal.useEnvFile": true
 }
